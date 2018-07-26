@@ -4,7 +4,7 @@ CFLAGS=			-c -Wall
 GLFLAGS=		-lGL -lGLU -lglut
 SDLFLAGS=		-lSDL -lSL_image
 #File name setting
-CODE=			HelloWorld-manipulated.cpp
+CODE=			HelloWorld.cpp
 #Bullet3 libraries and headers addresses
 B3SOURCE=		~/Bullet/bullet3/src/
 B3SB=			~/Bullet/bullet3/bin/libBulletSoftBody_gmake_x64_release.a
@@ -34,7 +34,7 @@ bullet2: $(CODE)
 run: $(OUTPUT)
 	@ $(EXECUTE)
 
-clean: 
+clean:
 	@ rm *.out *.o *.txt
 
 write: $(OUTPUT)
