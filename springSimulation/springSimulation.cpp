@@ -3,7 +3,7 @@
 
 #include <cmath> // needed for sqrt (for frequency calculation)
 // libraries for using btGeneric6DofSpring2Constraint (the recent spring)
-#include "../../../Bullet/bullet3/src/BulletDynamics/ConstraintSolver/btGeneric6DofSpring2Constraint.h"
+#include "BulletDynamics/ConstraintSolver/btGeneric6DofSpring2Constraint.h"
 
 /*#######	Important note 	#######
 	The 'btGeneric6DofSpring2Constraint' seems more suitable for engineering simulations.

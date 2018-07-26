@@ -6,19 +6,23 @@ SDLFLAGS=		-lSDL -lSL_image
 #File name setting
 CODE=			springSimulation.cpp
 #Bullet3 libraries and headers addresses
+B3BINFOLDER=	~/Bullet/bullet3/bin
+B3BUILDSUFFIX=	_gmake_x64_release
 B3SOURCE=		~/Bullet/bullet3/src/
-B3SB=			~/Bullet/bullet3/bin/libBulletSoftBody_gmake_x64_release.a
-B3D=			~/Bullet/bullet3/bin/libBulletDynamics_gmake_x64_release.a ~/Bullet/bullet3/bin/libBullet3Dynamics_gmake_x64_release.a
-B3C=			~/Bullet/bullet3/bin/libBulletCollision_gmake_x64_release.a ~/Bullet/bullet3/bin/libBullet3Collision_gmake_x64_release.a
-B3LM=			~/Bullet/bullet3/bin/libLinearMath_gmake_x64_release.a
-B3FILELOADER=	~/Bullet/bullet3/bin/libBullet2FileLoader_gmake_x64_release.a
-B3OPENCL=		~/Bullet/bullet3/bin/libBullet3OpenCL_clew_gmake_x64_release.a
+#Bullet3 libraries
+B3SB=			$(B3BINFOLDER)/libBulletSoftBody$(B3BUILDSUFFIX).a
+B3D=			$(B3BINFOLDER)/libBulletDynamics$(B3BUILDSUFFIX).a $(B3BINFOLDER)/libBullet3Dynamics$(B3BUILDSUFFIX).a
+B3C=			$(B3BINFOLDER)/libBulletCollision$(B3BUILDSUFFIX).a $(B3BINFOLDER)/libBullet3Collision$(B3BUILDSUFFIX).a
+B3LM=			$(B3BINFOLDER)/libLinearMath$(B3BUILDSUFFIX).a
+B3FILELOADER=	$(B3BINFOLDER)/libBullet2FileLoader$(B3BUILDSUFFIX).a
+B3OPENCL=		$(B3BINFOLDER)/libBullet3OpenCL_clew$(B3BUILDSUFFIX).a
 #Bullet2 libraries and headers addresses
-B2SOURCE=		~/Bullet/bullet-2.82/src/
-B2SB=			~/Bullet/bullet-2.82/lib/libBulletSoftBody.a
-B2D=			~/Bullet/bullet-2.82/lib/libBulletDynamics.a
-B2C=			~/Bullet/bullet-2.82/lib/libBulletCollision.a
-B2LM=			~/Bullet/bullet-2.82/lib/libLinearMath.a
+B2PATH=			~/Bullet/bullet-2.82
+B2SOURCE=		$(B2PATH)/src/
+B2SB=			$(B2PATH)/lib/libBulletSoftBody.a
+B2D=			$(B2PATH)/lib/libBulletDynamics.a
+B2C=			$(B2PATH)/lib/libBulletCollision.a
+B2LM=			$(B2PATH)/lib/libLinearMath.a
 #Output setting
 OUTPUT=			output.out
 EXECUTE=		./$(OUTPUT)
